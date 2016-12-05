@@ -4,8 +4,8 @@ Version 1.0
 ==================================================================
 The R script run_analysis.R reads the test and training data sets for Human Activity Recognition Using Smartphones, and creates a tidy data in the file set activity_averages.txt. The tidy data set contains the averages of various measures. More information is available in run_analysis.md.
 
-To read the tidy data set, you may use the read.file() function with the parameter header = FALSE.
-Example: tidy_data <- read.table("<file path>/activity_averages.txt", header = FALSE)
+To read the tidy data set, you may use the read.file() function with the parameter header = TRUE.
+Example: tidy_data <- read.table("<file path>/activity_averages.txt", header = TRUE)
 
 The codebook file for the features is features_averages_info.txt
 
