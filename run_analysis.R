@@ -40,4 +40,4 @@ act_melt <- melt(merged_data, id = c("subject", "activity"),
 
 #Create the tidy data set by averaging the measures, and output to a text file
 tidy_data <- dcast(act_melt, subject + activity ~ variable, mean)
-write.table(tidy_data, file = paste(file_path_main, "activity_averages.txt", sep = ""))
+write.table(tidy_data, file = paste(file_path_main, "activity_averages.txt", sep = ""), row.names = FALSE)
