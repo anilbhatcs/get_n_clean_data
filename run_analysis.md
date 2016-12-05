@@ -44,7 +44,7 @@ The script merges the test and training data sets using the rbind() function. It
 The script calls the join() function to read the Activity Label (read from the file activity_labels.txt) into the merged data set
 
 ### Reshape the merged data
-Given that there are 79 columns with mean and standard deviation measures in the merged data frame, the easiest way to perform any statistical operation on each of them is to melt down the measures into variable and value columns. In other words, the script calls the melt() function to reshape the merged data set into just four columns: * subject
+Given that there are 66 columns with mean and standard deviation measures in the merged data frame, the easiest way to perform any statistical operation on each of them is to melt down the measures into variable and value columns. In other words, the script calls the melt() function to reshape the merged data set into just four columns: * subject
 * activity
 * variable
 * value 
@@ -52,4 +52,4 @@ Given that there are 79 columns with mean and standard deviation measures in the
 Note that the activity ID is excluded. Instead the molten data frame uses the descriptive activity name.
 
 ### Create the tidy data set
-The final objective of calculating the averages of each variable and creating a tidy data set is accomplished using the dcast() function. The tidy data set reshapes the molten data frame from the previous step back into a data frame containing the subject, activity and 79 columns of averages. The final tidy data set is written out to a file called activity_averages.txt.
+The final objective of calculating the averages of each variable and creating a tidy data set is accomplished using the dcast() function. The tidy data set reshapes the molten data frame from the previous step back into a data frame containing the subject, activity and 66 columns of averages. The final tidy data set is written out to a file called activity_averages.txt. The column names for each variable are written to a separate file called features_averages.txt.
