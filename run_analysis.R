@@ -40,14 +40,12 @@ act_melt <- melt(merged_data, id = c("subject", "activity"),
 
 #Create the tidy data set by averaging the measures, and output to a text file
 tidy_data <- dcast(act_melt, subject + activity ~ variable, mean)
-write.table(tidy_data, file = paste(file_path_main, "activity_averages.txt", sep = ""), row.names = FALSE, 
-            col.names = FALSE)
+tidy_col <- colnames(tidy_data)
+tidy_col <- gsub("^t","Time", tidy_col)
+tidy_col <- gsub("^f","Frequency", tidy_col)
+tidy_col <- gsub("Acc", "Acceleration", tidy_col)
+tidy_col <- gsub("Mag", "Magnitude", tidy_col)
+tidy_col <- gsub("BodyBody", "Body", tidy_col)
 
-#Create a file containing the feature column names
-feat_index <- features[grep("(mean|std)\\(\\)", features[, 2]), 2]
-key_cols <- c("subject", "activity")
-num_rows <- length(feat_index) + 2
-ave_features <- data.frame(feat_id = 1:num_rows, feat_val = union(key_cols, feat_index))
-write.table(ave_features, 
-            file = paste(file_path_main, "features_averages.txt", sep = ""), row.names = FALSE, 
-            col.names = FALSE)
+write.table(tidy_data, file = paste(file_path_main, "activity_averages.txt", sep = ""), row.names = FALSE,
+            col.names = tidy_col)

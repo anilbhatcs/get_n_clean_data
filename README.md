@@ -7,7 +7,7 @@ The R script run_analysis.R reads the test and training data sets for Human Acti
 To read the tidy data set, you may use the read.file() function with the parameter header = FALSE.
 Example: tidy_data <- read.table("<file path>/activity_averages.txt", header = FALSE)
 
-The column names for the tidy data set are in the file features_averages.txt. The codebook file for the features is features_averages_info.txt
+The codebook file for the features is features_averages_info.txt
 
 License:
 ========

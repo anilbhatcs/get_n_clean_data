@@ -52,4 +52,4 @@ Given that there are 66 columns with mean and standard deviation measures in the
 Note that the activity ID is excluded. Instead the molten data frame uses the descriptive activity name.
 
 ### Create the tidy data set
-The final objective of calculating the averages of each variable and creating a tidy data set is accomplished using the dcast() function. The tidy data set reshapes the molten data frame from the previous step back into a data frame containing the subject, activity and 66 columns of averages. The final tidy data set is written out to a file called activity_averages.txt. The column names for each variable are written to a separate file called features_averages.txt.
+The final objective of calculating the averages of each variable and creating a tidy data set is accomplished using the dcast() function. The tidy data set reshapes the molten data frame from the previous step back into a data frame containing the subject, activity and 66 columns of averages. The columns are made descriptive through pattern substitutions using the function gsub().
