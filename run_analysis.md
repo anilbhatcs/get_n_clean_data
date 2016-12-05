@@ -30,8 +30,8 @@ There are two code files:
 Reading the data sets consists of the following steps:
 * Read the x, y, and subject files for the test data set using the read.table() function
 * Merge the data read from the files using the cbind() function
-+ It is assumed that all three files contain the same number of rows
-+ While merging the data by their columns, the script passes only the required mean and standard deviation columns to the the function
+    + It is assumed that all three files contain the same number of rows
+    + While merging the data by their columns, the script passes only the required mean and standard deviation columns to the the function
 * The above steps are repeated for the training data steps
 
 Each resulting data set contains the Subject, Activity ID, and the required mean and standard deviation columns. Note that the Subject and Activity ID columns are named later in the script.
@@ -47,6 +47,7 @@ Given that there are 79 columns with mean and standard deviation measures in the
 * activity
 * variable
 * value 
+
 Note that the activity ID is excluded. Instead the molten data frame uses the descriptive activity name.
 
 ### Create the tidy data set
