@@ -2,6 +2,7 @@
 
 ## Summary of steps executed by the script
 The steps are as follows:
+
 1. Load the libraries
 2. Define file path constants
 3. Read the code files
